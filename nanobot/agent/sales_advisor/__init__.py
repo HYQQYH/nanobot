@@ -19,6 +19,11 @@ from nanobot.agent.sales_advisor.advisor import (
     SalesContext,
     AdvisorConfig,
 )
+from nanobot.agent.sales_advisor.hook import (
+    SalesAdvisorHook,
+    SalesAdvisorHookConfig,
+    SalesContextMixin,
+)
 
 __all__ = [
     # 人设
@@ -40,4 +45,8 @@ __all__ = [
     "XiaoAnAdvisor",
     "SalesContext",
     "AdvisorConfig",
+    # 集成钩子
+    "SalesAdvisorHook",
+    "SalesAdvisorHookConfig",
+    "SalesContextMixin",
 ]
