@@ -14,6 +14,11 @@ from nanobot.agent.sales_advisor.knowledge import (
     PolicyDatabase,
     SalesKnowledge,
 )
+from nanobot.agent.sales_advisor.advisor import (
+    XiaoAnAdvisor,
+    SalesContext,
+    AdvisorConfig,
+)
 
 __all__ = [
     # 人设
@@ -31,4 +36,8 @@ __all__ = [
     "ProductKnowledge",
     "PolicyDatabase",
     "SalesKnowledge",
+    # 顾问主入口
+    "XiaoAnAdvisor",
+    "SalesContext",
+    "AdvisorConfig",
 ]
