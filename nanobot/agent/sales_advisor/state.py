@@ -44,6 +44,29 @@ class SalesStage:
             pass
         return None
 
+    @classmethod
+    def stage_order(cls) -> list[str]:
+        """获取阶段的执行顺序（不含completed）"""
+        return [
+            cls.OPENING,
+            cls.EMPATHY,
+            cls.NEEDS_DISCOVERY,
+            cls.PRODUCT_INTRO,
+            cls.POLICY_DETAIL,
+            cls.OBJECTION,
+            cls.CLOSING,
+            cls.AFTER_SALES,
+        ]
+
+    @classmethod
+    def stage_index(cls, stage: str) -> int:
+        """获取阶段的索引"""
+        stages = cls.stage_order()
+        try:
+            return stages.index(stage)
+        except ValueError:
+            return 0
+
 
 @dataclass
 class CustomerProfile:
